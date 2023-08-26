@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    @apply bg-primary-300;
+}
+
+h1 {
+    @apply text-lg font-bold;
+}
