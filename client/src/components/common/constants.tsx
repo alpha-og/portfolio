@@ -2,9 +2,10 @@ import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { LinkElement } from "./LinkUl";
 
 export const navLinks: Array<LinkElement> = [
-    { title: "Portfolio", to: "/portfolio" },
-    { title: "Blog", to: "/blog" },
-    { title: "About", to: "/about" },
+    { title: "Home", to: "#home" },
+    { title: "Portfolio", to: "#portfolio" },
+    { title: "About", to: "#about" },
+    { title: "Contact", to: "#contact" },
 ];
 
 export const socialLinks: Array<LinkElement> = [

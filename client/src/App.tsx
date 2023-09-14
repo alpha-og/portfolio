@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Footer, Landing, Nav } from "./components/components";
+import { Main, Nav } from "./components/components";
 
 function App() {
     return (
@@ -8,10 +8,10 @@ function App() {
 
             <div className="flex-grow">
                 <Routes>
-                    <Route path="/" element={<Landing />} />
+                    <Route path="/" element={<Main />} />
                 </Routes>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

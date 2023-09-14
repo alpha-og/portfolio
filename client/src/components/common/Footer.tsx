@@ -1,7 +1,8 @@
 import LinkUl from "./LinkUl";
 import { navLinks, socialLinks } from "./constants";
 const ulClassName = "flex flex-col flex-shrink-0 gap-1 text-secondary-500";
-const linkClassName = "flex flex-shrink-0 justify-start items-center gap-2";
+const linkClassName =
+    "flex flex-shrink-0 justify-start items-center gap-2 hover:text-accent-800 ease-in-out duration-500";
 const h1ClassName = "text-base text-secondary-700";
 const classNames = { ulClassName, linkClassName, h1ClassName };
 const Footer = () => {
