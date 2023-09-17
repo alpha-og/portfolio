@@ -4,7 +4,7 @@ import { navLinks } from "./constants";
 
 const Nav = () => {
     return (
-        <div className="h-12 p-2 flex justify-between items-center ">
+        <div className="absolute w-full h-12 p-2 flex justify-between items-center ">
             <h1 className="text-secondary-700 hover:text-accent-800 ease-in-out duration-500">
                 <Link to="/">Athul Anoop</Link>
             </h1>

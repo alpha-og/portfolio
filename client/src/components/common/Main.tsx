@@ -1,11 +1,11 @@
 import React from "react";
-import { About, Contact, Home } from "../components";
+import { About, Contact, Home, Portfolio } from "../components";
 
 const Main = () => {
     return (
-        <div className="h-full p-2">
+        <div className="h-full">
             <Home />
-            {/* <Portfolio /> */}
+            <Portfolio />
             <About />
             <Contact />
         </div>

@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+// import { Link } from "react-router-dom";
 
 export interface LinkElement {
     title: string;
@@ -24,13 +25,13 @@ const LinkUl = (props: LinkUlProp) => {
             <ul className={classNames?.ulClassName}>
                 {elements.map((element, index) => (
                     <li className={classNames?.liClassName} key={index}>
-                        <Link
+                        <AnchorLink
                             className={classNames?.linkClassName}
-                            to={element.to}
+                            href={element.to}
                         >
                             {element.icon}
                             {element.title}
-                        </Link>
+                        </AnchorLink>
                     </li>
                 ))}
             </ul>
