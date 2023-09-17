@@ -1,4 +1,3 @@
-import React from "react";
 import { aboutDetails, detailCluster } from "../common/constants";
 
 const Circle = () => {

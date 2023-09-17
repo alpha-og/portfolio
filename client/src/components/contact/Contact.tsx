@@ -1,4 +1,3 @@
-import React from "react";
 import contactImg from "../../assets/contact.svg";
 import LinkUl from "../common/LinkUl";
 import { socialLinks } from "../common/constants";

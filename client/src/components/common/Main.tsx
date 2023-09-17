@@ -1,4 +1,3 @@
-import React from "react";
 import { About, Contact, Home, Portfolio } from "../components";
 
 const Main = () => {

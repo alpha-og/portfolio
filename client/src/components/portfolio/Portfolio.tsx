@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import spiral from "../../assets/Abstract - Spiral.jpeg";
 import bottle from "../../assets/Bottle.jpeg";
