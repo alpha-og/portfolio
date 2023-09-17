@@ -17,10 +17,10 @@ const Rating = (props: { proficiency: number }) => {
     const decimal = proficiency - Math.floor(proficiency);
     const circles: Array<JSX.Element> = [];
     for (let i = 0; i < integer; i++) {
-        circles.push(<Circle />);
+        circles.push(<Circle key={i} />);
     }
     if (decimal > 0) {
-        circles.push(<SemiCircle />);
+        circles.push(<SemiCircle key={proficiency} />);
     }
 
     return (
@@ -39,9 +39,12 @@ const DetailCard = (props: detailCluster) => {
             <div className="flex flex-col gap-5 flex-grow">
                 <h1 className="text-4xl">{detailType}</h1>
                 <ul className="w-full text-lg leading-loose">
-                    {details.map((detail) => {
+                    {details.map((detail, index) => {
                         return (
-                            <li className="w-full flex items-center justify-between gap-5">
+                            <li
+                                className="w-full flex items-center justify-between gap-5"
+                                key={index}
+                            >
                                 <p>{detail.detailName}</p>
                                 <Rating
                                     proficiency={
@@ -68,8 +71,8 @@ const About = () => {
         >
             <h1 className="text-8xl">About Me</h1>
             <div className="grid grid-cols-2 grid-rows-2 gap-10">
-                {aboutDetails.map((aboutDetail) => {
-                    return <DetailCard {...aboutDetail} />;
+                {aboutDetails.map((aboutDetail, index) => {
+                    return <DetailCard {...aboutDetail} key={index} />;
                 })}
             </div>
         </section>
