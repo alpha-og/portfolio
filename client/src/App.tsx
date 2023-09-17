@@ -8,7 +8,7 @@ function App() {
 
             <div className="flex-grow">
                 <Routes>
-                    <Route path="/" element={<Main />} />
+                    <Route path="/" element={<Main />}></Route>
                 </Routes>
             </div>
             {/* <Footer /> */}
