@@ -1,4 +1,4 @@
-import pfp from "../../assets/pfp.jpeg";
+import pfp from "../../../public/pfp.jpeg";
 const Home = () => {
     return (
         <section

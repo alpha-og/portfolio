@@ -1,4 +1,4 @@
-import contactImg from "../../assets/contact.svg";
+import contactImg from "../../../public/contact.svg";
 import LinkUl from "../common/LinkUl";
 import { socialLinks } from "../common/constants";
 

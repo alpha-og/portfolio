@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import spiral from "../../assets/Abstract - Spiral.jpeg";
-import bottle from "../../assets/Bottle.jpeg";
-import doorHandle from "../../assets/Door Handle.jpeg";
-import steth from "../../assets/Stethoscope.png";
-import damnThumbnail from "../../assets/damnThumbnail.png";
+import spiral from "../../../public/Abstract - Spiral.jpeg";
+import bottle from "../../../public/Bottle.jpeg";
+import doorHandle from "../../../public/Door Handle.jpeg";
+import steth from "../../../public/Stethoscope.png";
+import damnThumbnail from "../../../public/damnThumbnail.png";
 
 const ProjectCard = (props: {
     title?: string;

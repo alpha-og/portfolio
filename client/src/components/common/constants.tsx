@@ -1,8 +1,8 @@
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-import achievements from "../../assets/achievements.svg";
-import communication from "../../assets/communication.svg";
-import interests from "../../assets/interests.svg";
-import skills from "../../assets/skills.svg";
+import achievements from "../../../public/achievements.svg";
+import communication from "../../../public/communication.svg";
+import interests from "../../../public/interests.svg";
+import skills from "../../../public/skills.svg";
 import { LinkElement } from "./LinkUl";
 
 type detail = { detailName: string; proficiency?: number };
