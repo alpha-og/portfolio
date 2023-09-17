@@ -1,6 +1,6 @@
-import contactImg from "../../../public/contact.svg";
 import LinkUl from "../common/LinkUl";
 import { socialLinks } from "../common/constants";
+import contactImg from "/contact.svg";
 
 const ulClassName =
     "flex flex-row flex-shrink-0 justify-between text-primary-400";

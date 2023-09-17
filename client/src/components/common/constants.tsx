@@ -1,9 +1,9 @@
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-import achievements from "../../../public/achievements.svg";
-import communication from "../../../public/communication.svg";
-import interests from "../../../public/interests.svg";
-import skills from "../../../public/skills.svg";
 import { LinkElement } from "./LinkUl";
+import achievements from "/achievements.svg";
+import communication from "/communication.svg";
+import interests from "/interests.svg";
+import skills from "/skills.svg";
 
 type detail = { detailName: string; proficiency?: number };
 export type detailCluster = {
@@ -49,7 +49,7 @@ export const aboutDetails: Array<detailCluster> = [
         detailType: "Interests",
         details: [
             { detailName: "Machine Learning" },
-            { detailName: "Open Source Software Development" },
+            { detailName: "FOSS Development" },
             { detailName: "Cybersecurity" },
             { detailName: "Content Writing" },
             { detailName: "Robotics" },
@@ -70,11 +70,15 @@ export const aboutDetails: Array<detailCluster> = [
         details: [
             {
                 detailName:
-                    "1. Received numerous awards for academic excellence during my time at BVB Vivekananda Vidya Mandir School (2021-23)",
+                    "1. Sahodaya South Zone Subject Topper in Grade 12 CBSE Computer Science (2023)",
             },
             {
                 detailName:
                     "2. Finalist (Team) in the Space Habitat Challenge conducted by ISRO in association with the World Space Week (2021)",
+            },
+            {
+                detailName:
+                    "3. Finalist in the Young Environmental Scientist (YES) competition held by the IWMA at IIT-Madras (2017)",
             },
         ],
         img: achievements,

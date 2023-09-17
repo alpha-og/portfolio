@@ -25,13 +25,13 @@ const LinkUl = (props: LinkUlProp) => {
             <ul className={classNames?.ulClassName}>
                 {elements.map((element, index) => (
                     <li className={classNames?.liClassName} key={index}>
-                        <AnchorLink
+                        <a
                             className={classNames?.linkClassName}
                             href={element.to}
                         >
                             {element.icon}
                             {element.title}
-                        </AnchorLink>
+                        </a>
                     </li>
                 ))}
             </ul>

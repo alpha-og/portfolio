@@ -71,9 +71,28 @@ const About = () => {
         >
             <h1 className="text-8xl">About Me</h1>
             <div className="grid grid-cols-2 grid-rows-2 gap-10">
-                {aboutDetails.map((aboutDetail, index) => {
+                {aboutDetails.slice(0, 3).map((aboutDetail, index) => {
                     return <DetailCard {...aboutDetail} key={index} />;
                 })}
+            </div>
+            <div className="flex flex-row justify-between">
+                <div className="flex flex-col gap-5 flex-grow">
+                    <h1 className="text-4xl">Achievements</h1>
+                    <ul className="w-full text-lg leading-loose">
+                        {aboutDetails.slice(3, 4).map((detail, index) => {
+                            return detail.details.map((detail) => {
+                                return (
+                                    <li
+                                        className="w-full flex items-center justify-between gap-5"
+                                        key={index}
+                                    >
+                                        <p>{detail.detailName}</p>
+                                    </li>
+                                );
+                            });
+                        })}
+                    </ul>
+                </div>
             </div>
         </section>
     );
