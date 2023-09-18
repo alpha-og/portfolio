@@ -11,7 +11,7 @@ const Nav = () => {
             <LinkUl
                 elements={navLinks}
                 classNames={{
-                    ulClassName: "flex gap-5",
+                    ulClassName: "hidden md:flex gap-5",
                     liClassName:
                         "hover:text-accent-800 hover:scale-105 ease-in-out duration-500",
                 }}

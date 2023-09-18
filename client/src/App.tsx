@@ -3,7 +3,7 @@ import { Main, Nav } from "./components/components";
 
 function App() {
     return (
-        <div className="h-screen flex flex-col">
+        <div className="h-screen w-screen flex flex-col">
             <Nav />
 
             <div className="flex-grow">

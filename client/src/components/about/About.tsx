@@ -37,7 +37,7 @@ const DetailCard = (props: detailCluster) => {
     return (
         <div className="flex flex-row justify-between">
             <div className="flex flex-col gap-5 flex-grow">
-                <h1 className="text-4xl">{detailType}</h1>
+                <h1 className="text-2xl md:text-4xl">{detailType}</h1>
                 <ul className="w-full text-lg leading-loose">
                     {details.map((detail, index) => {
                         return (
@@ -58,7 +58,7 @@ const DetailCard = (props: detailCluster) => {
                     })}
                 </ul>
             </div>
-            <img src={img} alt={detailType} className="w-64" />
+            <img src={img} alt={detailType} className="hidden md:inline w-64" />
         </div>
     );
 };
@@ -67,17 +67,17 @@ const About = () => {
     return (
         <section
             id="about"
-            className="flex flex-col gap-10 px-28 py-16 text-secondary-700"
+            className="flex flex-col gap-10 px-7 md:px-28 py-8 md:py-16 text-secondary-700"
         >
-            <h1 className="text-8xl">About Me</h1>
-            <div className="grid grid-cols-2 grid-rows-2 gap-10">
+            <h1 className="text-6xl md:text-8xl">About Me</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-max md:grid-rows-2 gap-10">
                 {aboutDetails.slice(0, 3).map((aboutDetail, index) => {
                     return <DetailCard {...aboutDetail} key={index} />;
                 })}
             </div>
             <div className="flex flex-row justify-between">
                 <div className="flex flex-col gap-5 flex-grow">
-                    <h1 className="text-4xl">Achievements</h1>
+                    <h1 className="text-2xl md:text-4xl">Achievements</h1>
                     <ul className="w-full text-lg leading-loose">
                         {aboutDetails.slice(3, 4).map((detail, index) => {
                             return detail.details.map((detail) => {
