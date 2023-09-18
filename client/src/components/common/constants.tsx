@@ -87,11 +87,15 @@ export const aboutDetails: Array<detailCluster> = [
             },
             {
                 detailName:
-                    "2. Finalist (Team) in the Space Habitat Challenge conducted by ISRO in association with the World Space Week (2021)",
+                    "2. School Topper in CBSE Grade 12 at BVB Vivekananda Vidya Mandir (2023)",
             },
             {
                 detailName:
-                    "3. Finalist in the Young Environmental Scientist (YES) competition held by the IWMA at IIT-Madras (2017)",
+                    "3. Finalist (Team) in the Space Habitat Challenge conducted by ISRO in association with the World Space Week (2021)",
+            },
+            {
+                detailName:
+                    "4. Finalist in the Young Environmental Scientist (YES) competition held by the IWMA at IIT-Madras (2017)",
             },
         ],
         img: achievements,
