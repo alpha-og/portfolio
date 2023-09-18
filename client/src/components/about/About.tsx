@@ -58,7 +58,13 @@ const DetailCard = (props: detailCluster) => {
                     })}
                 </ul>
             </div>
-            <img src={img} alt={detailType} className="hidden md:inline w-64" />
+            {img && (
+                <img
+                    src={img}
+                    alt={detailType}
+                    className="hidden md:inline w-64"
+                />
+            )}
         </div>
     );
 };
@@ -71,7 +77,7 @@ const About = () => {
         >
             <h1 className="text-6xl md:text-8xl">About Me</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-max md:grid-rows-2 gap-10">
-                {aboutDetails.slice(0, 3).map((aboutDetail, index) => {
+                {aboutDetails.slice(0, 4).map((aboutDetail, index) => {
                     return <DetailCard {...aboutDetail} key={index} />;
                 })}
             </div>
@@ -79,7 +85,7 @@ const About = () => {
                 <div className="flex flex-col gap-5 flex-grow">
                     <h1 className="text-2xl md:text-4xl">Achievements</h1>
                     <ul className="w-full text-lg leading-loose">
-                        {aboutDetails.slice(3, 4).map((detail, index) => {
+                        {aboutDetails.slice(4, 5).map((detail, index) => {
                             return detail.details.map((detail) => {
                                 return (
                                     <li

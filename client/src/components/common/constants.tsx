@@ -9,7 +9,7 @@ type detail = { detailName: string; proficiency?: number };
 export type detailCluster = {
     detailType: string;
     details: Array<detail>;
-    img: string;
+    img?: string;
 };
 
 export const navLinks: Array<LinkElement> = [
@@ -64,6 +64,19 @@ export const aboutDetails: Array<detailCluster> = [
             { detailName: "Malayalam", proficiency: 3.5 },
         ],
         img: communication,
+    },
+    {
+        detailType: "Software and Programming Languages",
+        details: [
+            { detailName: "Blender 3D", proficiency: 3 },
+            { detailName: "Da Vinci Resolve", proficiency: 3 },
+            { detailName: "GIMP", proficiency: 2 },
+            { detailName: "Inkscape", proficiency: 2 },
+            { detailName: "Python", proficiency: 3.5 },
+            { detailName: "C/CPP", proficiency: 2 },
+            { detailName: "JavaScript & TypeScript", proficiency: 2.5 },
+            { detailName: "Web Development — MERN Stack", proficiency: 3 },
+        ],
     },
     {
         detailType: "Achievements",
