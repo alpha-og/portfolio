@@ -5,15 +5,15 @@ const paragraphs = [
 
 const ProfileCard = () => {
   return (
-    <div className="border h-full p-6 flex flex-col justify-start items-start gap-4 rounded-lg shadow-sm bg-white sm:gap-8 sm:p-8">
-      <div className="flex justify-center gap-4">
+    <div className="border w-full h-full p-6 flex flex-col justify-start items-start gap-4 rounded-lg shadow-sm bg-white sm:gap-8 sm:p-8">
+      <div className="w-full flex justify-start items-center gap-4">
         <img
           src="pfp.jpeg"
           alt="Athul Anoop"
           className="rounded-full w-20 h-20 sm:w-32 sm:h-32"
         />
-        <div className="flex flex-col justify-around">
-          <h1 className="text-xl font-bold sm:text-5xl md:text-6xl ">
+        <div className="w-full flex flex-col justify-around">
+          <h1 className="text-2xl font-bold sm:text-5xl md:text-6xl ">
             Athul Anoop
           </h1>
           <p className="text-md text-neutral-500 sm:text-xl">

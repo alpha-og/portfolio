@@ -73,7 +73,7 @@ const ContactList = ({ contactItems }: { contactItems: T_ContactItem[] }) => {
 
 const ContactCard = () => {
   return (
-    <div className="border w-full h-full p-6 flex flex-col justify-between items-center gap-4 rounded-lg shadow-sm bg-white md:w-[28rem] md-p-8 md:gap-8">
+    <div className="border w-full h-full p-6 flex flex-col justify-center items-center gap-4 rounded-lg shadow-sm bg-white xl:w-[28rem] xl:p-8 xl:gap-8">
       <h1 className="text-2xl text-neutral-500 sm:text-4xl ">Contact Me</h1>
       <ContactList contactItems={contactItems} />
     </div>
