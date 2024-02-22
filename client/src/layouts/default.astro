@@ -1,0 +1,21 @@
+---
+import {Nav} from '../components/components'
+const {title} = Astro.props
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="flex flex-col w-screen h-screen">
+        <div class="absolute inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] z-0"></div>
+        <Nav />
+        <div class="border w-full h-full z-10 flex flex-col justify-center items-center ">
+            <slot />
+        </div>
+	</body>
+</html>
