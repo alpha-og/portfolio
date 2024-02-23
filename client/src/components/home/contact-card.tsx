@@ -43,7 +43,7 @@ const contactItems: T_ContactItem[] = [
 ];
 
 const twContactItem =
-  "border w-full h-10 p-4 flex justify-around items-center gap-4 flex-shrink-0 rounded-lg shadow-sm ease-in-out duration-500 hover:text-white hover:border-black hover:shadow-lg sm:h-12";
+  "border w-full h-12 p-4 flex justify-around items-center gap-4 flex-shrink-0 rounded-lg shadow-sm ease-in-out duration-500 hover:text-white hover:border-black hover:shadow-lg";
 
 const ContactItem = ({
   href,
@@ -73,8 +73,8 @@ const ContactList = ({ contactItems }: { contactItems: T_ContactItem[] }) => {
 
 const ContactCard = () => {
   return (
-    <div className="border w-full h-full p-6 flex flex-col justify-center items-center gap-4 rounded-lg shadow-sm bg-white xl:w-[28rem] xl:p-8 xl:gap-8">
-      <h1 className="text-2xl text-neutral-500 sm:text-4xl ">Contact Me</h1>
+    <div className="border min-w-max w-full h-full p-6 flex flex-col justify-around items-center gap-4 rounded-lg shadow-sm bg-white md:w-max ">
+      <h1 className="text-neutral-500 text-4xl ">Contact Me</h1>
       <ContactList contactItems={contactItems} />
     </div>
   );

@@ -5,25 +5,23 @@ const paragraphs = [
 
 const ProfileCard = () => {
   return (
-    <div className="border w-full h-full p-6 flex flex-col justify-start items-start gap-4 rounded-lg shadow-sm bg-white sm:gap-8 sm:p-8">
-      <div className="w-full flex justify-start items-center gap-4">
+    <div className="border min-w-min h-max p-6 flex flex-col justify-start items-start gap-6 rounded-lg shadow-sm bg-white md:h-full">
+      <div className="w-full flex flex-col justify-start items-center gap-4 md:flex-row">
         <img
           src="pfp.jpeg"
           alt="Athul Anoop"
-          className="rounded-full w-20 h-20 sm:w-32 sm:h-32"
+          className="rounded-full w-48 h-48 md:w-32 md:h-32"
         />
-        <div className="w-full flex flex-col justify-around">
-          <h1 className="text-2xl font-bold sm:text-5xl md:text-6xl ">
+        <div className="w-full flex flex-col justify-around items-center gap-2 md:gap-0">
+          <h1 className="min-w-max w-full text-4xl font-bold min-[375px]:text-5xl md:text-4xl lg:text-6xl">
             Athul Anoop
           </h1>
-          <p className="text-md text-neutral-500 sm:text-xl">
-            Software Developer
-          </p>
+          <p className="w-full text-xl text-neutral-500">Software Developer</p>
         </div>
       </div>
       <div>
         {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-sm sm:text-lg">
+          <p key={index} className="min-[375px]:text-lg">
             {paragraph}
           </p>
         ))}
