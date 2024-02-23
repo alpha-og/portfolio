@@ -32,7 +32,8 @@ const contactItems: T_ContactItem[] = [
     href: "https://www.instagram.com/athul_0g/",
     displayText: "Instagram",
     icon: AiOutlineInstagram,
-    className: "hover:bg-[#e1306c] hover:shadow-[#e1306c]",
+    className:
+      "hover:shadow-[#e1306c] hover:bg-gradient-to-r hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045]",
   },
   {
     href: "https://twitter.com/alpha_0g_501",
@@ -73,7 +74,7 @@ const ContactList = ({ contactItems }: { contactItems: T_ContactItem[] }) => {
 
 const ContactCard = () => {
   return (
-    <div className="border min-w-max w-full h-full p-6 flex flex-col justify-around items-center gap-4 rounded-lg shadow-sm bg-white md:w-max ">
+    <div className="border min-w-max w-full h-full p-6 flex flex-col justify-around items-center gap-4 rounded-lg shadow-sm bg-white md:w-max ease-in-out duration-300">
       <h1 className="text-neutral-500 text-4xl ">Contact Me</h1>
       <ContactList contactItems={contactItems} />
     </div>
