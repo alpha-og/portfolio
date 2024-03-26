@@ -15,7 +15,7 @@ const Nav = () => {
           <a href="/blog">Blog</a>
         </li>
       </ul>
-      <span>
+      <span className="static opacity-100 sm:absolute sm:opacity-0 ease-in-out duration-500">
         <Menu />
       </span>
     </nav>
