@@ -1,11 +1,21 @@
 ---
-import DefaultLayout from "../layouts/default.astro"
-import {ProfileCard, ContactCard, TechstackCard } from "../components/components" 
+import DefaultLayout from "../layouts/default.astro";
+import {
+  ProfileCard,
+  ContactCard,
+  TechstackCard,
+} from "../components/components";
 ---
+
 <DefaultLayout title="Athul Anoop">
-<div class="w-full px-8 py-4 flex flex-col justify-center items-center gap-8 md:p-16 md:flex-row ease-in-out duration-300">
-        <ProfileCard/>
-        <ContactCard/>
-</div>
+  <div
+    class="w-full h-full md:h-screen z-10 flex flex-col justify-center items-center"
+  >
+    <div
+      class="w-full px-8 py-4 flex flex-col justify-center items-center gap-8 md:p-16 md:flex-row ease-in-out duration-300"
+    >
+      <ProfileCard />
+      <ContactCard />
+    </div>
+  </div>
 </DefaultLayout>
-    
