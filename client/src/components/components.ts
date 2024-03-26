@@ -1,4 +1,6 @@
 import Nav from "./nav";
 import ProfileCard from "./home/profile-card";
 import ContactCard from "./home/contact-card";
-export { Nav, ProfileCard, ContactCard };
+import TechstackCard from "./home/techstack-card";
+
+export { Nav, ProfileCard, ContactCard, TechstackCard };
