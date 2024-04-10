@@ -1,7 +1,7 @@
 import { Github } from "lucide-react";
-import damnBanner from "../../assets/projects/banners/damn-banner.png";
+import damnBanner from "../../assets/projects/banners/damn-banner.webp";
 // import diffBanner from "../../assets/projects/banners/diff-banner.png";
-import drishtiCetBanner from "../../assets/projects/banners/drishti-cet-banner.png";
+import drishtiCetBanner from "../../assets/projects/banners/drishti-cet-banner.webp";
 
 type T_project = {
   [key: string]: {
