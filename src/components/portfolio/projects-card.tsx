@@ -37,7 +37,7 @@ const projects: T_project = {
     description:
       "I worked as lead developer for the official website of Drishti CET 2024, our college's Tech fest",
     banner: drishtiCetBanner.src,
-    githubUrl: null,
+    githubUrl: undefined,
     websiteUrl: "https://www.drishti.cet.ac.in/",
     techStack: ["React", "Vite JS", "TailwindCSS", "Firebase"],
   },
