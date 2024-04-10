@@ -67,17 +67,17 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
       <div className="flex flex-col gap-2 ">
         <div className="flex justify-between">
           <h3 className="text-2xl font-semibold">{project.title}</h3>
-        {project.githubUrl &&
- <a
-            href={project.githubUrl}
-            target="_blank"
-            className="p-1 flex items-center bg-neutral-900 text-white rounded-lg"
-          >
-            <span>
-              <Github />
-            </span>
-          </a>
-                    } 
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              className="p-1 flex items-center bg-neutral-900 text-white rounded-lg"
+            >
+              <span>
+                <Github />
+              </span>
+            </a>
+          )}
         </div>
         <p>{project.description}</p>
         <div className="flex flex-wrap gap-2">
