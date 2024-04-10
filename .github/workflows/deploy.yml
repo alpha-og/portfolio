@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
         run:
-            working-directory: ./client/
+            working-directory: client 
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
@@ -29,6 +29,9 @@ jobs:
           path: ./client # The root location of your Astro project inside the repository. (optional)
           # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
           # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+      - name: Configure path (Optional)
+        if: path != 'client'  # Only run if Astro project is not in the root
+        run: echo "ASTRO_SOURCE_DIR=client" >> $GITHUB_ENV  # Set environment variable
 
   deploy:
     needs: build
