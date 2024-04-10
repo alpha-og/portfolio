@@ -11,9 +11,9 @@ const navVariants = {
 };
 
 const navItems = [
-  { title: "Home", url: "/" },
-  { title: "Portfolio", url: "/portfolio" },
-  { title: "Blog", url: "/blog" },
+  { title: "Home", url: "/portfolio/" },
+  { title: "Portfolio", url: "/portfolio/portfolio" },
+  { title: "Blog", url: "/portfolio/blog" },
 ];
 
 const Nav = () => {
