@@ -1,0 +1,15 @@
+---
+title: "Exploring Open Source LLMs"
+date: 2022-03-22
+tags: ["Machine Learning", "AI", "Open Source", "LLMs"]
+language: "en"
+banner: "/src/assets/banners/ollama.png"
+---
+
+Machine learning (ML) and Artificial Intelligence (AI) have found numerous commercially viable applications in the fast few years, with Large Language Models (LLMs) being the most significant in terms of hype and utility, albeit other domains like classification, regression and neural networks have been popular for quite some time. Considering this, I'd like to touch upon an interesting development surrounding LLMs — open source LLMs
+
+As an open source enthusiast, open source LLMs are an exciting frontier to me since they open up possibilities of creating custom applications utilising LLMs without having to gather vast amounts of data or train the model myself. So, what's the big deal? — as an end user you are no longer bound to subscriptions plans for AI models and AI applications with nearly infinite freedom to tailor the experience to your liking, with the only caveat being that you need a device capable of running the LLM. There are a multitude of different open source LLMs available such as LLAMA2, Dolphin-Phi and Mistral to name a few. Each model has its own distinct characteristics with some being good with reasoning and logical processing while others may be distinctively superior in coding tasks or be capable of processing images and audio; a common aspect is that almost all these models are good with a chat-like communication format. This write-up is focused on providing an overview of how you could setup an LLM for yourself without getting into the nuances of the models themselves.
+
+A tool/ piece of software known as [Ollama](https://ollama.com/) helps us in utilising the available open source LLMs to create an instance of the model. Ollama can be used as a standalone application to download, host and run LLMs; however, in order to truly take advantage of the model, a framework known as [LangChain](https://www.langchain.com/) can be used. LangChain exposes an API interface to the LLM through Ollama, making it really intuitive and simple to quickly have an LLM model up and running in a matter of minutes. Through this API we can write scripts in Python or make entire Javascript based projects that can process user input. One of the most interesting aspects is the ability to provide the model with a document or image file and have it produce summaries or answer any associated queries. Another application is by taking advantage of Retrieval Augmented Generation (RAG) to supply the model with contextual information so that the model can produce results that are relevant to the context. LangChain abstracts away the complexity associated with loading the model and supplying it with input, thus simplifying the process of creating LLM based software
+
+The developments in the ML/ AI space continue to grow and expand with open source communities making these technologies and software available to nearly anyone. Open source ML models like LLAMA2 are crucial to making the future of ML/ AI more accessible, safe and reliable
