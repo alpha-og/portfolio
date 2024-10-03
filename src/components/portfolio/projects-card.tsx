@@ -3,7 +3,7 @@ import damnBanner from "../../assets/projects/banners/damn-banner.webp";
 // import diffBanner from "../../assets/projects/banners/diff-banner.png";
 import drishtiCetBanner from "../../assets/projects/banners/drishti-cet-banner.webp";
 import { useEffect, useState } from "react";
-import { Transition } from "@headlessui/react";
+// import { Transition } from "@headlessui/react";
 
 type T_project = {
   [key: string]: {
