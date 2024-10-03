@@ -1,8 +1,9 @@
 import pfp from "../../assets//pfp.webp";
+import { MapPin } from "lucide-react";
 
 const paragraphs = [
   "I'm a student and software developer with a passion for tech, and a positive outlook towards creating software solutions that ultimately lead to a better tomorrow",
-  "I'm also interested in graphic design, ML/ AI and embedded systems.",
+  "My interests span across systems software,embedded systems, application development and machine learning.",
 ];
 
 const ProfileCard = () => {
@@ -18,7 +19,15 @@ const ProfileCard = () => {
           <h1 className="min-w-max w-full text-4xl font-bold min-[375px]:text-5xl md:text-4xl lg:text-6xl ease-in-out duration-300">
             Athul Anoop
           </h1>
-          <p className="w-full text-xl text-neutral-500">Software Developer</p>
+          <p className="w-full">
+            <span className="text-xl text-neutral-500">Software Developer</span>
+          </p>
+          <p className="w-full flex flex-row justify-start items-center gap-2 md:gap-0 ease-in-out duration-300">
+            <MapPin size={24} className="inline-block text-red-400" />
+            <a href="https://maps.app.goo.gl/xN2yMbbJfz8mJvMbA">
+              <span className="text-xl text-neutral-500">Kerala, India</span>
+            </a>
+          </p>
         </div>
       </div>
       <div>

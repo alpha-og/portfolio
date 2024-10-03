@@ -2,6 +2,8 @@ import { Github } from "lucide-react";
 import damnBanner from "../../assets/projects/banners/damn-banner.webp";
 // import diffBanner from "../../assets/projects/banners/diff-banner.png";
 import drishtiCetBanner from "../../assets/projects/banners/drishti-cet-banner.webp";
+import { useEffect, useState } from "react";
+import { Transition } from "@headlessui/react";
 
 type T_project = {
   [key: string]: {
@@ -11,10 +13,26 @@ type T_project = {
     githubUrl?: string;
     websiteUrl?: string;
     techStack: string[];
+    visible?: boolean | false;
   };
 };
 
 const projects: T_project = {
+  fin: {
+    title: "Fin",
+    description:
+      "Fin is my take on a launcher and quick access tool that aims to provide a pluggable and composable open source alternative to tools like Spotlight and Raycast",
+    banner: "",
+    githubUrl: "https://github.com/alpha-og/fin",
+    techStack: [
+      "Rust",
+      "Tauri",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "SQLite",
+    ],
+  },
   diff: {
     title: "Diff",
     description:
@@ -54,7 +72,7 @@ const projects: T_project = {
 
 const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
   return (
-    <div className="w-full p-4 flex flex-col gap-4 border rounded-lg bg-white md:flex-row">
+    <div className="w-full p-4 flex flex-col gap-4 border rounded-lg bg-white md:flex-row transition ease-in-out duration-300 data-[closed]:opacity-0">
       {project.banner && (
         <a href={project.websiteUrl} target="_blank" className="w-full md:w-72">
           <img
@@ -96,12 +114,62 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
 };
 
 const ProjectsCard = () => {
+  const [projectsQueue, setProjectsQueue] = useState<
+    T_project[keyof T_project][]
+  >([]);
+  const [updating, setUpdating] = useState(false);
+
+  const enqueue = (project: T_project[keyof T_project]) => {
+    if (projectsQueue.length < 4) {
+      project = { ...project, visible: true };
+    } else {
+      project = { ...project, visible: false };
+    }
+    setProjectsQueue((queue) => [...queue, project]);
+  };
+  const dequeue = () => {
+    if (projectsQueue.length === 0) {
+      return;
+    }
+    const dequeuedProject = projectsQueue[0];
+
+    const queue = [
+      ...projectsQueue.slice(1, 4).map((queue) => {
+        return { ...queue, visible: true };
+      }),
+      ...projectsQueue.slice(4),
+    ];
+    setProjectsQueue(queue);
+    return dequeuedProject;
+  };
+
+  // useEffect(() => {
+  //   console.log(projectsQueue);
+  //   if (!updating) {
+  //     const interval = setInterval(() => {
+  //       setUpdating(true);
+  //       const dequeuedProject = dequeue();
+  //       dequeuedProject && enqueue(dequeuedProject);
+  //       setUpdating(false);
+  //     }, 3000);
+  //     return () => clearInterval(interval);
+  //   }
+  // }, [projectsQueue, updating]);
+
+  useEffect(() => {
+    setUpdating(true);
+    Object.keys(projects).forEach((key) => {
+      enqueue(projects[key]);
+    });
+    setUpdating(false);
+  }, []);
+
   return (
-    <div className="flex flex-col gap-4 p-4 bg-white border rounded-lg md:col-span-2">
+    <div className="flex flex-col gap-4 p-4 bg-white border rounded-lg md:col-span-2 ">
       <h2 className="text-3xl font-bold">Projects</h2>
       <div className="flex flex-wrap gap-4">
-        {Object.entries(projects).map(([key, value]) => (
-          <ProjectCard key={key} project={value} />
+        {projectsQueue.map((project) => (
+          <ProjectCard key={project.title} project={project} />
         ))}
       </div>
     </div>
