@@ -1,6 +1,5 @@
 import { Menu, X } from "lucide-react";
 import useNavrail from "../hooks/useNavrail";
-import * as motion from "motion/react-client";
 
 const navVariants = {
   navbar:
