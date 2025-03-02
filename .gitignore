@@ -24,3 +24,4 @@ config.env
 *.njsproj
 *.sln
 *.sw?
+.astro
