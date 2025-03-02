@@ -9,7 +9,7 @@ const navVariants = {
 const navItems = [
   { title: "Home", url: "/portfolio/" },
   { title: "Portfolio", url: "/portfolio/portfolio" },
-  { title: "Blog", url: "/portfolio/blog" },
+  // { title: "Blog", url: "/portfolio/blog" },
 ];
 
 const Nav = () => {
