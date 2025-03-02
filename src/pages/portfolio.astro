@@ -8,11 +8,16 @@ import {
 ---
 
 <DefaultLayout>
-  <div class="p-6 grid grid-cols-1 gap-8 md:px-16 md:py-8 md:grid-cols-3">
-    <div class="grid grid-cols-subgrid gap-8">
-      <SkillsCard />
-      <InterestsCard />
-    </div>
-    <ProjectsCard client:load/>
+  <div
+    class="w-full h-full z-10 flex flex-col justify-center items-center"
+  >
+
+      <div class="py-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div class="grid grid-cols-subgrid gap-8">
+          <SkillsCard />
+          <InterestsCard />
+        </div>
+        <ProjectsCard client:load/>
+      </div>
   </div>
 </DefaultLayout>

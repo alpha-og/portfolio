@@ -30,14 +30,11 @@ const skills: T_skill = {
 
 const SkillsCard = () => {
   return (
-    <div className="h-full flex flex-col gap-4 p-4 bg-white border rounded-lg">
+    <div className="glass h-full flex flex-col gap-4 p-4 rounded-xl">
       <h2 className="text-3xl font-bold">Skills</h2>
       <div className="flex flex-wrap gap-4">
         {Object.entries(skills).map(([key, value]) => (
-          <h3
-            key={key}
-            className="w-max px-2 border rounded-lg bg-white text-xl"
-          >
+          <h3 key={key} className="glass w-max px-2 rounded-xl text-xl">
             {value.title}
           </h3>
         ))}

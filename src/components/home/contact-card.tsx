@@ -28,13 +28,13 @@ const contactItems: T_ContactItem[] = [
     icon: AiOutlineLinkedin,
     className: "hover:bg-[#0a66c2] hover:shadow-[#0a66c2]",
   },
-  {
-    href: "https://www.instagram.com/athul_0g/",
-    displayText: "Instagram",
-    icon: AiOutlineInstagram,
-    className:
-      "hover:shadow-[#e1306c] hover:bg-gradient-to-r hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045]",
-  },
+  // {
+  //   href: "https://www.instagram.com/athul_0g/",
+  //   displayText: "Instagram",
+  //   icon: AiOutlineInstagram,
+  //   className:
+  //     "hover:shadow-[#e1306c] hover:bg-gradient-to-r hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045]",
+  // },
   {
     href: "https://twitter.com/alpha_0g_501",
     displayText: "Twitter",
@@ -44,7 +44,7 @@ const contactItems: T_ContactItem[] = [
 ];
 
 const twContactItem =
-  "border w-full h-12 p-4 flex justify-around items-center gap-4 flex-shrink-0 rounded-lg shadow-sm ease-in-out duration-500 hover:text-white hover:border-black hover:shadow-lg";
+  "w-full h-12 p-4 flex justify-around items-center gap-4 flex-shrink-0 rounded-lg shadow-sm shadow-black/10 border-2 border-white/10 ease-in-out duration-500 hover:text-white hover:shadow-lg";
 
 const ContactItem = ({
   href,
@@ -64,7 +64,7 @@ const ContactItem = ({
 
 const ContactList = ({ contactItems }: { contactItems: T_ContactItem[] }) => {
   return (
-    <ul className="w-full flex flex-col gap-2">
+    <ul className="w-full h-full flex flex-col gap-2 flex-shrink-0 justify-around">
       {contactItems.map((contactItem, index) => (
         <ContactItem key={index} {...contactItem} />
       ))}
@@ -74,7 +74,7 @@ const ContactList = ({ contactItems }: { contactItems: T_ContactItem[] }) => {
 
 const ContactCard = () => {
   return (
-    <div className="border min-w-max w-full h-full p-6 flex flex-col justify-around items-center gap-4 rounded-lg shadow-sm bg-white md:w-96 ease-in-out duration-300">
+    <div className="p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass ease-in-out duration-300">
       <ContactList contactItems={contactItems} />
     </div>
   );

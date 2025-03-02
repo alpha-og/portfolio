@@ -72,17 +72,17 @@ const projects: T_project = {
 
 const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
   return (
-    <div className="w-full p-4 flex flex-col gap-4 border rounded-lg bg-white md:flex-row transition ease-in-out duration-300 data-[closed]:opacity-0">
+    <div className="glass w-full p-4 flex flex-col gap-4 rounded-xl md:flex-row transition ease-in-out duration-300 data-[closed]:opacity-0">
       {project.banner && (
         <a href={project.websiteUrl} target="_blank" className="w-full md:w-72">
           <img
             src={project.banner}
             alt={project.title}
-            className="w-full rounded-lg object-cover object-center md:h-full"
+            className="w-full rounded-xl object-cover object-center md:h-full"
           />
         </a>
       )}
-      <div className="flex flex-col gap-2 ">
+      <div className="w-full h-full flex flex-col gap-2 ">
         <div className="flex justify-between">
           <h3 className="text-2xl font-semibold">{project.title}</h3>
           {project.githubUrl && (
@@ -97,16 +97,15 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
             </a>
           )}
         </div>
-        <p>{project.description}</p>
-        <div className="flex flex-wrap gap-2">
-          {project.techStack.map((tech) => (
-            <h4
-              key={tech}
-              className="px-2 py-1 border rounded-lg bg-white text-sm"
-            >
-              {tech}
-            </h4>
-          ))}
+        <div className="h-full flex flex-col justify-between gap-2">
+          <p>{project.description}</p>
+          <div className="flex flex-wrap gap-2">
+            {project.techStack.map((tech) => (
+              <h4 key={tech} className="glass px-2 py-1 rounded-lg text-sm">
+                {tech}
+              </h4>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -127,22 +126,22 @@ const ProjectsCard = () => {
     }
     setProjectsQueue((queue) => [...queue, project]);
   };
-  const dequeue = () => {
-    if (projectsQueue.length === 0) {
-      return;
-    }
-    const dequeuedProject = projectsQueue[0];
-
-    const queue = [
-      ...projectsQueue.slice(1, 4).map((queue) => {
-        return { ...queue, visible: true };
-      }),
-      ...projectsQueue.slice(4),
-    ];
-    setProjectsQueue(queue);
-    return dequeuedProject;
-  };
-
+  // const dequeue = () => {
+  //   if (projectsQueue.length === 0) {
+  //     return;
+  //   }
+  //   const dequeuedProject = projectsQueue[0];
+  //
+  //   const queue = [
+  //     ...projectsQueue.slice(1, 4).map((queue) => {
+  //       return { ...queue, visible: true };
+  //     }),
+  //     ...projectsQueue.slice(4),
+  //   ];
+  //   setProjectsQueue(queue);
+  //   return dequeuedProject;
+  // };
+  //
   // useEffect(() => {
   //   console.log(projectsQueue);
   //   if (!updating) {
@@ -165,10 +164,10 @@ const ProjectsCard = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-4 p-4 bg-white border rounded-lg md:col-span-2 ">
+    <div className="glass flex flex-col gap-4 p-4 rounded-xl md:col-span-2 ">
       <h2 className="text-3xl font-bold">Projects</h2>
       <div className="flex flex-wrap gap-4">
-        {projectsQueue.map((project) => (
+        {Object.values(projects).map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>

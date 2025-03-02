@@ -8,7 +8,7 @@ const paragraphs = [
 
 const ProfileCard = () => {
   return (
-    <div className="border min-w-min h-max p-6 flex flex-col justify-start items-start gap-6 rounded-lg shadow-sm bg-white md:h-full ease-in-out duration-300">
+    <div className="p-6 row-span-3 col-span-1 flex flex-col justify-start items-start gap-6 rounded-xl glass sm:row-span-2 lg:row-span-1 lg:col-span-3 ease-in-out duration-300">
       <div className="w-full flex flex-col justify-start items-center gap-4 md:flex-row ease-in-out duration-300">
         <img
           src={pfp.src}
