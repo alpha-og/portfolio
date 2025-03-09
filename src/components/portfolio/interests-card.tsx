@@ -30,7 +30,7 @@ const InterestsCard = () => {
     <motion.div
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, delay: 0.6 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
       className="glass h-full flex flex-col gap-4 p-4 rounded-xl"
     >
       <h2 className="text-3xl font-bold">Interests</h2>

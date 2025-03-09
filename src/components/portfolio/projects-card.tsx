@@ -74,7 +74,14 @@ const projects: T_project = {
 
 const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
   return (
-    <motion.div className="outline-1 outline-orange-200 shadow-lg w-full p-4 flex flex-col gap-4 rounded-xl md:flex-row transition ease-in-out duration-300 data-[closed]:opacity-0">
+    <motion.li
+      transition={{
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+      }}
+      className="outline-1 outline-orange-200 shadow-lg w-full p-4 flex flex-col gap-4 rounded-xl md:flex-row transition ease-in-out duration-300 data-[closed]:opacity-0"
+    >
       {project.banner && (
         <a href={project.websiteUrl} target="_blank" className="w-full md:w-72">
           <img
@@ -108,7 +115,7 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.li>
   );
 };
 
@@ -126,22 +133,22 @@ const ProjectsCard = () => {
     }
     setProjectsQueue((queue) => [...queue, project]);
   };
-  // const dequeue = () => {
-  //   if (projectsQueue.length === 0) {
-  //     return;
-  //   }
-  //   const dequeuedProject = projectsQueue[0];
-  //
-  //   const queue = [
-  //     ...projectsQueue.slice(1, 4).map((queue) => {
-  //       return { ...queue, visible: true };
-  //     }),
-  //     ...projectsQueue.slice(4),
-  //   ];
-  //   setProjectsQueue(queue);
-  //   return dequeuedProject;
-  // };
-  //
+  const dequeue = () => {
+    if (projectsQueue.length === 0) {
+      return;
+    }
+    const dequeuedProject = projectsQueue[0];
+
+    const queue = [
+      ...projectsQueue.slice(1, 4).map((queue) => {
+        return { ...queue, visible: true };
+      }),
+      ...projectsQueue.slice(4),
+    ];
+    setProjectsQueue(queue);
+    return dequeuedProject;
+  };
+
   // useEffect(() => {
   //   console.log(projectsQueue);
   //   if (!updating) {
@@ -154,14 +161,14 @@ const ProjectsCard = () => {
   //     return () => clearInterval(interval);
   //   }
   // }, [projectsQueue, updating]);
-
-  useEffect(() => {
-    setUpdating(true);
-    Object.keys(projects).forEach((key) => {
-      enqueue(projects[key]);
-    });
-    setUpdating(false);
-  }, []);
+  //
+  // useEffect(() => {
+  //   setUpdating(true);
+  //   Object.keys(projects).forEach((key) => {
+  //     enqueue(projects[key]);
+  //   });
+  //   setUpdating(false);
+  // }, []);
 
   return (
     <motion.div

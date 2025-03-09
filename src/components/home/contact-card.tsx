@@ -77,7 +77,7 @@ const ContactCard = () => {
     <motion.div
       initial={{ opacity: 0, x: 200 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.9, delay: 0.1 }}
+      transition={{ duration: 0.1, ease: "easeInOut" }}
       className="p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass ease-in-out duration-300"
     >
       <ContactList contactItems={contactItems} />
