@@ -3,6 +3,8 @@ import damnBanner from "../../assets/projects/banners/damn-banner.webp";
 // import diffBanner from "../../assets/projects/banners/diff-banner.png";
 import drishtiCetBanner from "../../assets/projects/banners/drishti-cet-banner.webp";
 import { useEffect, useState } from "react";
+import Chip from "@components/chip";
+import { motion } from "motion/react";
 // import { Transition } from "@headlessui/react";
 
 type T_project = {
@@ -72,7 +74,7 @@ const projects: T_project = {
 
 const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
   return (
-    <div className="glass w-full p-4 flex flex-col gap-4 rounded-xl md:flex-row transition ease-in-out duration-300 data-[closed]:opacity-0">
+    <motion.div className="outline-1 outline-orange-200 shadow-lg w-full p-4 flex flex-col gap-4 rounded-xl md:flex-row transition ease-in-out duration-300 data-[closed]:opacity-0">
       {project.banner && (
         <a href={project.websiteUrl} target="_blank" className="w-full md:w-72">
           <img
@@ -101,14 +103,12 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
           <p>{project.description}</p>
           <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech) => (
-              <h4 key={tech} className="glass px-2 py-1 rounded-lg text-sm">
-                {tech}
-              </h4>
+              <Chip key={tech} title={tech} className="text-base rounded-lg" />
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -164,14 +164,19 @@ const ProjectsCard = () => {
   }, []);
 
   return (
-    <div className="glass flex flex-col gap-4 p-4 rounded-xl md:col-span-2 ">
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.4, delay: 0.5, ease: "easeInOut" }}
+      className="glass flex flex-col gap-4 p-4 rounded-xl md:col-span-2 "
+    >
       <h2 className="text-3xl font-bold">Projects</h2>
       <div className="flex flex-wrap gap-4">
         {Object.values(projects).map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

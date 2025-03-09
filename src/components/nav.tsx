@@ -8,7 +8,7 @@ const navVariants = {
 
 const navItems = [
   { title: "Home", url: "/" },
-  { title: "Portfolio", url: "/portfolio" },
+  { title: "Portfolio", url: "#portfolio" },
   // { title: "Blog", url: "/blog" },
 ];
 
@@ -16,7 +16,7 @@ const Nav = () => {
   const { navrailHidden, toggleNavrail } = useNavrail();
   return (
     <nav
-      className={`sticky top-8 w-full h-12 px-8 flex justify-between items-center shrink-0 z-20 rounded-full ease-in-out duration-500 glass`}
+      className={`w-full h-12 px-8 flex justify-between items-center shrink-0 z-20 rounded-full ease-in-out duration-500 glass`}
     >
       <h1 className="text-lg font-bold">Athul Anoop</h1>
       {navrailHidden && (

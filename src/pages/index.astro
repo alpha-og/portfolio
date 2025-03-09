@@ -1,17 +1,37 @@
 ---
 import DefaultLayout from "../layouts/default.astro";
-import { ProfileCard, ContactCard } from "../components/components";
+import { ProfileCard, ContactCard ,
+  SkillsCard,
+  ProjectsCard,
+  InterestsCard,
+} from "../components/components";
+import { motion } from "motion/react";
+
 ---
 
 <DefaultLayout title="Athul Anoop">
-  <div
-    class="w-full h-full z-10 flex flex-col justify-center items-center lg:h-screen"
+  <section
+    id=""
+    class="w-full h-full z-10 flex flex-col justify-center items-center"
   >
     <div
-        class="py-16 grid grid-rows-4 grid-cols-1 gap-4 lg:py-0 lg:grid-rows-1 lg:grid-cols-4 ease-in-out duration-300"
+        class="grid grid-rows-3 grid-cols-1 gap-10 lg:grid-rows-1 lg:grid-cols-4 ease-in-out duration-300"
     >
-      <ProfileCard />
-      <ContactCard />
+      <ProfileCard client:load/>
+      <ContactCard client:load/>
     </div>
-  </div>
+  </section>
+  <section
+      id="portfolio"
+      class="w-full h-full z-10 flex flex-col justify-center items-center"
+      >
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+          <div class="grid grid-cols-subgrid gap-8">
+              <SkillsCard client:visible/>
+              <InterestsCard client:visible/>
+          </div>
+      <ProjectsCard client:visible/>
+      </div>
+  </section>
 </DefaultLayout>
+

@@ -6,7 +6,7 @@ import {
 } from "react-icons/ai";
 
 import type { IconType } from "react-icons";
-import React from "react";
+import { motion } from "motion/react";
 
 type T_ContactItem = {
   href: string;
@@ -44,7 +44,7 @@ const contactItems: T_ContactItem[] = [
 ];
 
 const twContactItem =
-  "w-full h-12 p-4 flex justify-around items-center gap-4 flex-shrink-0 rounded-lg shadow-sm shadow-black/10 border-2 border-white/10 ease-in-out duration-500 hover:text-white hover:shadow-lg";
+  "w-full h-12 p-4 flex justify-around items-center gap-4 flex-shrink-0 rounded-lg shadow-lg ease-in-out duration-500 hover:text-white hover:shadow-lg";
 
 const ContactItem = ({
   href,
@@ -74,9 +74,14 @@ const ContactList = ({ contactItems }: { contactItems: T_ContactItem[] }) => {
 
 const ContactCard = () => {
   return (
-    <div className="p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass ease-in-out duration-300">
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.9, delay: 0.1 }}
+      className="p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass ease-in-out duration-300"
+    >
       <ContactList contactItems={contactItems} />
-    </div>
+    </motion.div>
   );
 };
 export default ContactCard;

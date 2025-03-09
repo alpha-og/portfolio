@@ -4,6 +4,7 @@ import ContactCard from "./home/contact-card";
 import SkillsCard from "./portfolio/skills-card";
 import ProjectsCard from "./portfolio/projects-card";
 import InterestsCard from "./portfolio/interests-card";
+import Chip from "./chip";
 
 export {
   Nav,
