@@ -10,6 +10,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://alpha-og.github.io/",
-  base: "portfolio",
+  site: "https://athulanoop.is-a.dev/",
+  base: "/",
 });
