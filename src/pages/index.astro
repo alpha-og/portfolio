@@ -1,10 +1,10 @@
 ---
 import DefaultLayout from "../layouts/default.astro";
-import { ProfileCard, ContactCard ,
-  SkillsCard,
-  ProjectsCard,
-  InterestsCard,
-} from "../components/components";
+import ProfileCard from "@components/home/profile-card";
+import ContactCard from "@components/home/contact-card";
+import SkillsCard from "@components/portfolio/skills-card";
+import InterestsCard from "@components/portfolio/interests-card";
+import ProjectsCard from "@components/portfolio/projects-card";
 
 ---
 
@@ -14,7 +14,7 @@ import { ProfileCard, ContactCard ,
     class="w-full h-full z-10 flex flex-col justify-center items-center"
   >
     <div
-        class="grid grid-rows-3 grid-cols-1 gap-10 lg:grid-rows-1 lg:grid-cols-4 ease-in-out duration-300"
+        class="w-full grid grid-rows-3 grid-cols-1 gap-10 lg:grid-rows-1 lg:grid-cols-4 ease-in-out duration-300"
     >
       <ProfileCard client:load/>
       <ContactCard client:load/>
@@ -24,7 +24,7 @@ import { ProfileCard, ContactCard ,
       id="portfolio"
       class="w-full h-full z-10 flex flex-col justify-center items-center"
       >
-      <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+      <div class="w-full grid grid-cols-1 gap-10 md:grid-cols-3">
           <div class="grid grid-cols-subgrid gap-8">
               <SkillsCard client:visible/>
               <InterestsCard client:visible/>

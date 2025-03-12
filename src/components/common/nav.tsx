@@ -1,9 +1,9 @@
 import { Menu, X } from "lucide-react";
-import useNavrail from "../hooks/useNavrail";
+import useNavrail from "@hooks/useNavrail";
 
 const navVariants = {
   navbar:
-    "absolute -top-24 flex justify-evenly items-center gap-16 opacity-0 sm:static sm:opacity-100 ease-in-out duration-500",
+    "absolute -top-24 flex justify-evenly items-center gap-16 opacity-0 sm:static sm:opacity-100 2xl:text-2xl ease-in-out duration-500",
 };
 
 const navItems = [
@@ -16,9 +16,11 @@ const Nav = () => {
   const { navrailHidden, toggleNavrail } = useNavrail();
   return (
     <nav
-      className={`w-full h-12 px-8 flex justify-between items-center shrink-0 z-20 rounded-full ease-in-out duration-500 glass`}
+      className={`w-full h-12 px-8 flex justify-between items-center shrink-0 z-20 rounded-full ease-in-out duration-500 glass 2xl:h-18`}
     >
-      <h1 className="text-lg font-bold">Athul Anoop</h1>
+      <h1 className="text-lg font-bold lg:text-xl 2xl:text-4xl">
+        <a href="/">Athul Anoop</a>
+      </h1>
       {navrailHidden && (
         <>
           <ul className={navVariants.navbar}>

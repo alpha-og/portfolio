@@ -44,7 +44,7 @@ const contactItems: T_ContactItem[] = [
 ];
 
 const twContactItem =
-  "w-full h-12 p-4 flex justify-around items-center gap-4 flex-shrink-0 rounded-lg shadow-lg ease-in-out duration-500 hover:text-white hover:shadow-lg";
+  "w-full h-12 p-4 flex justify-around items-center gap-4 flex-shrink-0 rounded-lg shadow-lg outline-1 outline-orange-200 2xl:h-18 ease-in-out duration-500 hover:text-white hover:shadow-lg";
 
 const ContactItem = ({
   href,
@@ -55,8 +55,12 @@ const ContactItem = ({
   return (
     <a href={href}>
       <li className={`${twContactItem} ${className}`}>
-        {<Icon className="w-8 h-8 flex-shrink-0" />}
-        <p className="flex-grow text-lg ">{displayText}</p>
+        {
+          <Icon className="w-8 h-8 flex-shrink-0 xl:w-10 xl:h-10 2xl:w-12 2xl:h-12" />
+        }
+        <p className="flex-grow text-lg xl:text-xl 2xl:text-3xl">
+          {displayText}
+        </p>
       </li>
     </a>
   );
@@ -78,7 +82,7 @@ const ContactCard = () => {
       initial={{ opacity: 0, x: 200 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.1, ease: "easeInOut" }}
-      className="p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass ease-in-out duration-300"
+      className="p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass 2xl:p-10 ease-in-out duration-300"
     >
       <ContactList contactItems={contactItems} />
     </motion.div>

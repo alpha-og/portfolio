@@ -3,7 +3,7 @@ import damnBanner from "../../assets/projects/banners/damn-banner.webp";
 // import diffBanner from "../../assets/projects/banners/diff-banner.png";
 import drishtiCetBanner from "../../assets/projects/banners/drishti-cet-banner.webp";
 import { useEffect, useState } from "react";
-import Chip from "@components/chip";
+import Chip from "@components/common/chip";
 import { motion } from "motion/react";
 // import { Transition } from "@headlessui/react";
 
@@ -80,7 +80,7 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
         stiffness: 100,
         damping: 20,
       }}
-      className="outline-1 outline-orange-200 shadow-lg w-full p-4 flex flex-col gap-4 rounded-xl md:flex-row transition ease-in-out duration-300 data-[closed]:opacity-0"
+      className="outline-1 outline-orange-200 shadow-lg w-full p-4 flex flex-col gap-4 rounded-xl md:flex-row xl:p-6 xl:gap-6 2xl:p-8 2xl:gap-8 transition ease-in-out duration-300 data-[closed]:opacity-0"
     >
       {project.banner && (
         <a href={project.websiteUrl} target="_blank" className="w-full md:w-72">
@@ -93,7 +93,9 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
       )}
       <div className="w-full h-full flex flex-col gap-2 ">
         <div className="flex justify-between">
-          <h3 className="text-2xl font-semibold">{project.title}</h3>
+          <h3 className="text-2xl font-semibold xl:text-3xl 2xl:text-4xl">
+            {project.title}
+          </h3>
           {project.githubUrl && (
             <a
               href={project.githubUrl}
@@ -106,11 +108,15 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
             </a>
           )}
         </div>
-        <div className="h-full flex flex-col justify-between gap-2">
+        <div className="h-full flex flex-col justify-between gap-2 xl:gap-4 xl:text-lg 2xl:text-2xl 2xl:gap-6">
           <p>{project.description}</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 xl:gap-4">
             {project.techStack.map((tech) => (
-              <Chip key={tech} title={tech} className="text-base rounded-lg" />
+              <Chip
+                key={tech}
+                title={tech}
+                className="text-base rounded-lg 2xl:text-2xl"
+              />
             ))}
           </div>
         </div>
@@ -175,9 +181,9 @@ const ProjectsCard = () => {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4, delay: 0.5, ease: "easeInOut" }}
-      className="glass flex flex-col gap-4 p-4 rounded-xl md:col-span-2 "
+      className="glass flex flex-col gap-4 p-6 rounded-xl md:col-span-2 xl:gap-6 2xl:gap-8 2xl:p-10"
     >
-      <h2 className="text-3xl font-bold">Projects</h2>
+      <h2 className="text-3xl font-bold xl:text-4xl 2xl:text-5xl">Projects</h2>
       <div className="flex flex-wrap gap-4">
         {Object.values(projects).map((project) => (
           <ProjectCard key={project.title} project={project} />
