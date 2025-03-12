@@ -1,6 +1,7 @@
 import pfp from "../../assets//pfp.webp";
 import { MapPin } from "lucide-react";
 import { motion } from "motion/react";
+import { useEffect } from "react";
 
 const paragraphs = [
   "I'm a student and software developer with a passion for tech, and a positive outlook towards creating software solutions that ultimately lead to a better tomorrow.",
@@ -8,6 +9,17 @@ const paragraphs = [
 ];
 
 const ProfileCard = () => {
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search);
+    const value = searchParams.get("decrypt");
+    document.cookie = "decrypt=wreckord";
+
+    if (value === "wreckord") {
+      document.cookie =
+        "flag=2f012b510c3b0647273f545e3a210145701c38560f3544001f1157420b1f111930161a";
+      window.location.href = "/wreckord.rs";
+    }
+  }, []);
   return (
     <motion.div
       initial={{ opacity: 0, x: -100 }}
