@@ -1,5 +1,6 @@
 ---
-import DefaultLayout from "../layouts/default.astro";
+import DefaultLayout from "@layouts/default.astro";
+import HomeSection from "@layouts/home-section.astro";
 import ProfileCard from "@components/home/profile-card";
 import ContactCard from "@components/home/contact-card";
 import SkillsCard from "@components/portfolio/skills-card";
@@ -9,20 +10,11 @@ import ProjectsCard from "@components/portfolio/projects-card";
 ---
 
 <DefaultLayout title="Athul Anoop">
-  <section
-    id=""
-    class="w-full h-full z-10 flex flex-col justify-center items-center"
-  >
-    <div
-        class="w-full grid grid-rows-3 grid-cols-1 gap-4 lg:gap-10 lg:grid-rows-1 lg:grid-cols-4 ease-in-out duration-300"
-    >
+    <HomeSection id="home">
       <ProfileCard client:load/>
-      <ContactCard client:load/>
-    </div>
-  </section>
-  <section
+    </HomeSection>
+    <HomeSection
       id="portfolio"
-      class="w-full h-full z-10 flex flex-col justify-center items-center"
       >
       <div class="w-full grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-10">
           <div class="grid grid-cols-subgrid gap-8">
@@ -31,6 +23,11 @@ import ProjectsCard from "@components/portfolio/projects-card";
           </div>
       <ProjectsCard client:visible/>
       </div>
-  </section>
+    </HomeSection>
+    <HomeSection
+    id="contact"
+    >
+        <ContactCard client:load/>
+    </HomeSection>
 </DefaultLayout>
 
