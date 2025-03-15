@@ -5,7 +5,6 @@ import drishtiCetBanner from "../../assets/projects/banners/drishti-cet-banner.w
 import { useEffect, useState } from "react";
 import Chip from "@components/common/chip";
 import { motion } from "motion/react";
-// import { Transition } from "@headlessui/react";
 
 type T_project = {
   [key: string]: {
@@ -177,19 +176,14 @@ const ProjectsCard = () => {
   // }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.4, delay: 0.5, ease: "easeInOut" }}
-      className="glass flex flex-col gap-4 p-4 rounded-xl md:p-6 md:col-span-2 xl:gap-6 2xl:gap-8 2xl:p-10"
-    >
+    <div className="glass flex flex-col gap-4 p-4 rounded-xl md:p-6 md:col-span-2 xl:gap-6 2xl:gap-8 2xl:p-10">
       <h2 className="text-3xl font-bold xl:text-4xl 2xl:text-5xl">Projects</h2>
       <div className="flex flex-wrap gap-4">
         {Object.values(projects).map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

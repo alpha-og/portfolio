@@ -1,6 +1,5 @@
 import pfp from "../../assets//pfp.webp";
 import { MapPin } from "lucide-react";
-import { motion } from "motion/react";
 import { useEffect } from "react";
 
 const paragraphs = [
@@ -21,12 +20,7 @@ const ProfileCard = () => {
     }
   }, []);
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -100 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.1 }}
-      className="p-6 row-span-3 col-span-1 flex flex-col justify-start items-start gap-6 rounded-xl glass sm:row-span-2 lg:row-span-1 lg:col-span-3 xl:gap-8 2xl:gap-10 2xl:p-10 ease-in-out duration-300"
-    >
+    <div className="p-6 flex flex-col justify-start items-start gap-6 rounded-xl glass xl:gap-8 2xl:gap-10 2xl:p-10 ease-in-out duration-300">
       <div className="w-full flex flex-col justify-start items-center gap-4 md:flex-row lg:gap-6 xl:gap-8 2xl:gap-12 ease-in-out duration-300">
         <img
           src={pfp.src}
@@ -62,7 +56,7 @@ const ProfileCard = () => {
           </p>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 export default ProfileCard;

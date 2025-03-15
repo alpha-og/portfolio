@@ -2,11 +2,9 @@ import {
   AiOutlineGithub,
   AiOutlineLinkedin,
   AiOutlineTwitter,
-  AiOutlineInstagram,
 } from "react-icons/ai";
 
 import type { IconType } from "react-icons";
-import { motion } from "motion/react";
 
 type T_ContactItem = {
   href: string;
@@ -78,14 +76,9 @@ const ContactList = ({ contactItems }: { contactItems: T_ContactItem[] }) => {
 
 const ContactCard = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.1, ease: "easeInOut" }}
-      className="p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass 2xl:p-10 ease-in-out duration-300"
-    >
+    <div className="w-full p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass 2xl:p-10 ease-in-out duration-300">
       <ContactList contactItems={contactItems} />
-    </motion.div>
+    </div>
   );
 };
 export default ContactCard;
