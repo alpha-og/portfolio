@@ -4,6 +4,8 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 
+import Chip from "@components/common/chip";
+
 import type { IconType } from "react-icons";
 
 type T_ContactItem = {
@@ -77,7 +79,28 @@ const ContactList = ({ contactItems }: { contactItems: T_ContactItem[] }) => {
 const ContactCard = () => {
   return (
     <div className="w-full p-6 flex flex-col justify-around items-center gap-4 rounded-xl glass 2xl:p-10 ease-in-out duration-300">
-      <ContactList contactItems={contactItems} />
+      <h2 className="w-full text-3xl font-bold xl:text-4xl 2xl:text-5xl">
+        Connect with me
+      </h2>
+      <p className="w-full xl:gap-4 xl:text-lg 2xl:text-2xl ">
+        You can reach out to me on social media or by email. I'm open to new
+        opportunities and collaborations.
+      </p>
+      <div className="w-full flex flex-wrap gap-4 xl:gap-4">
+        {contactItems.map((contactItem, index) => (
+          <a
+            href={contactItem.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={index}
+          >
+            <Chip
+              title={contactItem.displayText}
+              // className="text-base rounded-lg 2xl:text-2xl"
+            />
+          </a>
+        ))}
+      </div>
     </div>
   );
 };

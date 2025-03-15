@@ -3,8 +3,7 @@ import { MapPin } from "lucide-react";
 import { useEffect } from "react";
 
 const paragraphs = [
-  "I'm a student and software developer with a passion for tech, and a positive outlook towards creating software solutions that ultimately lead to a better tomorrow.",
-  "My interest lies in machine learning, low-level systems software and applications with emphasis on high performance, reliability and security.",
+  "I'm a Computer Science student and software engineer, creating solutions at the crossroads of form and function. I strive to write software that is both efficient and delightful to use. Systems software, embedded systems and meachine learning are where my interest and efforts are primarily directed to.",
 ];
 
 const ProfileCard = () => {
@@ -32,14 +31,14 @@ const ProfileCard = () => {
             Athul Anoop
           </h1>
           <p className="w-full">
-            <span className="font-medium text-xl text-indigo-400 xl:text-2xl 2xl:text-4xl">
+            <span className="font-medium text-xl text-indigo-600/70 xl:text-2xl 2xl:text-4xl">
               Software Engineer
             </span>
           </p>
           <p className="w-full flex py-1 flex-row justify-start items-center gap-3 md:gap-0">
             <MapPin className="inline-block w-6 h-6 text-red-500 xl:w-7 xl:h-7" />
             <a href="https://maps.app.goo.gl/xN2yMbbJfz8mJvMbA">
-              <span className="px-1 font-medium text-xl text-indigo-400 xl:text-2xl 2xl:text-4xl">
+              <span className="px-1 font-medium text-xl text-indigo-600/70 xl:text-2xl 2xl:text-4xl">
                 Kerala, India
               </span>
             </a>
