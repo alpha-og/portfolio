@@ -6,12 +6,22 @@ import ContactCard from "@components/home/contact-card";
 import SkillsCard from "@components/portfolio/skills-card";
 import InterestsCard from "@components/portfolio/interests-card";
 import ProjectsCard from "@components/portfolio/projects-card";
+import { Image } from "astro:assets";
 
 ---
 
 <DefaultLayout title="Athul Anoop">
     <HomeSection id="home">
-      <ProfileCard client:load/>
+    <ProfileCard client:load>
+        <Image
+          src="/pfp.jpg"
+          alt="Athul Anoop"
+          width={512}
+          height={512}
+          class="border-2 border-white/20 rounded-full w-48 h-48 md:w-32 md:h-32 lg:w-48 lg:h-48 2xl:w-80 2xl:h-80"
+        />
+
+    </ProfileCard>
     </HomeSection>
     <HomeSection
       id="portfolio"
@@ -28,6 +38,7 @@ import ProjectsCard from "@components/portfolio/projects-card";
     id="contact"
     >
         <ContactCard client:load/>
+
     </HomeSection>
 </DefaultLayout>
 
