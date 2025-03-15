@@ -79,7 +79,7 @@ const ProjectCard = ({ project }: { project: T_project[keyof T_project] }) => {
         stiffness: 100,
         damping: 20,
       }}
-      className="outline-1 outline-orange-200 shadow-lg w-full p-2 flex flex-col gap-4 rounded-xl md:p-4 md:flex-row xl:p-6 xl:gap-6 2xl:p-8 2xl:gap-8 transition ease-in-out duration-300 data-[closed]:opacity-0"
+      className="outline-1 outline-orange-200 shadow-lg w-full p-2 flex flex-col gap-4 rounded-xl md:p-4 md:flex-row xl:p-6 xl:gap-6 2xl:p-8 2xl:gap-8 data-[closed]:opacity-0"
     >
       {project.banner && (
         <a href={project.websiteUrl} target="_blank" className="w-full md:w-72">

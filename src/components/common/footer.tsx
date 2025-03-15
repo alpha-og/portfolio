@@ -17,7 +17,7 @@ export default function Footer() {
           href="https://github.com/alpha-og/portfolio"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm text-black/80 md:text-base xl:text-lg hover:text-black/100 transition-all duration-300 ease-in-out"
+          className="text-sm text-black/80 md:text-base xl:text-lg hover:text-black/100"
         >
           View on GitHub
         </a>
