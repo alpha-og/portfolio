@@ -1,4 +1,3 @@
-import pfp from "../../assets/pfp.webp";
 import { MapPin } from "lucide-react";
 import { useEffect } from "react";
 
@@ -6,7 +5,7 @@ const paragraphs = [
   "I'm a Computer Science student and software engineer, creating solutions at the crossroads of form and function. I strive to write software that is both efficient and delightful to use. Systems software, embedded systems and meachine learning are where my interest and efforts are primarily directed to.",
 ];
 
-const ProfileCard = () => {
+const ProfileCard = (props: any) => {
   useEffect(() => {
     const searchParams = new URLSearchParams(window.location.search);
     const value = searchParams.get("decrypt");
@@ -21,11 +20,7 @@ const ProfileCard = () => {
   return (
     <div className="w-full p-6 flex flex-col justify-start items-start gap-6 rounded-xl glass xl:gap-8 2xl:gap-10 2xl:p-10">
       <div className="w-full flex flex-col justify-start items-center gap-4 md:flex-row lg:gap-6 xl:gap-8 2xl:gap-12">
-        <img
-          src={pfp.src}
-          alt="Athul Anoop"
-          className="rounded-full w-48 h-48 md:w-32 md:h-32 lg:w-48 lg:h-48 2xl:w-80 2xl:h-80"
-        />
+        {props.children}
         <div className="w-full flex flex-col justify-around items-center gap-2 md:gap-0">
           <h1 className="min-w-max w-full text-4xl font-bold min-[375px]:text-5xl md:text-4xl lg:text-6xl xl:text-7xl">
             Athul Anoop
