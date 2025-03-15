@@ -25,7 +25,10 @@ const Nav = () => {
         <>
           <ul className={navVariants.navbar}>
             {navItems.map((item, index) => (
-              <li key={index} className="w-full">
+              <li
+                key={index}
+                className="w-full hover:text-indigo-600 transition-colors ease-in-out duration-500"
+              >
                 <a href={item.url}>{item.title}</a>
               </li>
             ))}
